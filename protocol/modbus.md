@@ -12,7 +12,8 @@ Modbus
       - 이더넷 통신 : 네트워크상의 어떤 노드도 정보를 요청할 수 있다.(읽기, 쓰기)
                      응답은 요청정보에 있는 목적 주소 장비만 한다.
                      (브로드캐스트 주소일 때에는 예외, 목적지 주소가 0일때 수신한 모든 노드에서 요청을 처리하며 응답은 없다.)
-                     
+       ![modbus 구조](https://user-images.githubusercontent.com/53258490/89784469-b1cd1f00-db53-11ea-85ef-f80300c8f5cc.JPG)
+
       - master : wifi나 이동통신 등의 무선 통신 지원
  
  * Frame format

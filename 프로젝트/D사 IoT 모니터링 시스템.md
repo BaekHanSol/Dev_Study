@@ -1,5 +1,15 @@
-프레임워크 : spring boot jpa
-플랫폼 : node.js
-사용라이브러리 : react
-사용언어 : javascript, java
+* 수행기간 : 2019.12 ~ 진행중
+* 목적 : sensor와 PLC에서 데이터를 수집하여 고객사가 데이터를 모니터링 및 PLC를 제어할 수 있다.
+
+## Data Reciever
+----------------
+* 플랫폼 : node.js
+* 사용언어 : javascript
+-------------------------------------------------------------------------------------------
+## Front Side
+--------------------
+* 프레임워크 : spring boot jpa
+* 플랫폼 : node.js
+* 사용라이브러리 : react
+* 사용언어 : javascript, java
 

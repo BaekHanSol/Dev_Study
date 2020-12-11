@@ -4,7 +4,7 @@ mongodb - mongodb connector(Producer 역할) -> kafka -> logstash, app consumer 
 
 -Kafka 버전
 Scala 2.12, 2.5 ver
-
+```
 - mongo connector 설정
 name=mongo-source
 connector.class=com.mongodb.kafka.connect.MongoSourceConnector
@@ -25,7 +25,7 @@ pipeline=[]
 batch.size=0
 change.stream.full.document=updateLookup
 collation=
-
+```
 문제점 : logstash로 가는 데이터와 app consumer쪽에서 수신받는 데이터에 차이가 있음. app consumer쪽에서 선택해서 읽어 데이터 손실이 있음
 원인분석
 Q1. producer쪽에서 일부만 읽어 가는 것이 아닐까???

@@ -27,14 +27,14 @@ change.stream.full.document=updateLookup
 collation=
 ```
 문제점 : logstash로 가는 데이터와 app consumer쪽에서 수신받는 데이터에 차이가 있음. app consumer쪽에서 선택해서 읽어 데이터 손실이 있음
-원인분석
-Q1. producer쪽에서 일부만 읽어 가는 것이 아닐까???
-A1. NO. logstash는 제대로 읽어가고 있었음
-Q2. Consumer가 2개 이니까 logstash와의 경쟁에서 밀려서 제대로 못 읽고 있는 것이 아닐까?
-A2. NO. 읽고 있는 데이터 양을 확인해 보니 logstash와 app consumer는 비슷한 양으로 읽고 있었음
-Q3. producer 쪽에서 보내는 데이터 양이 많아서 한번에 처리를 못하는 것이 아닐까?
-A3. NO. 만약 그러하다면 lag가 쌓이고 최신 데이터를 읽지 못하고 과거 데이터를 가지고 와야하는데 그것도 아님 lag는 0이고 offset도 최신이었음
-???????????????????????
+   원인분석
+   Q1. producer쪽에서 일부만 읽어 가는 것이 아닐까???
+   A1. NO. logstash는 제대로 읽어가고 있었음
+   Q2. Consumer가 2개 이니까 logstash와의 경쟁에서 밀려서 제대로 못 읽고 있는 것이 아닐까?
+   A2. NO. 읽고 있는 데이터 양을 확인해 보니 logstash와 app consumer는 비슷한 양으로 읽고 있었음
+   Q3. producer 쪽에서 보내는 데이터 양이 많아서 한번에 처리를 못하는 것이 아닐까?
+   A3. NO. 만약 그러하다면 lag가 쌓이고 최신 데이터를 읽지 못하고 과거 데이터를 가지고 와야하는데 그것도 아님 lag는 0이고 offset도 최신이었음
+   ???????????????????????
 
 해결방안
 Producer 설정

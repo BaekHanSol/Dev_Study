@@ -11,7 +11,7 @@ connector.class=com.mongodb.kafka.connect.MongoSourceConnector
 tasks.max=1
 #tasks.max는 partition보다 높게 설정해야 함
 
-# Connection and source configuration
+ # Connection and source configuration
 connection.uri=mongodb://{MONGO_ID}:{MONGO_PASSWORD}@{IP_ADDRESS}:{PORT},{IP_ADDRESS}:{PORT}/thingarx_receiver?replicaSet=rs0
 database=thingarx_receiver
 collection=
